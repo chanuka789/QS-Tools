@@ -1,0 +1,6 @@
+{
+  "name": "Staircase Formwork & Volume Calculator",
+  "description": "An interactive web application to calculate staircase formwork area and concrete volume, complete with a dynamic side-view visualization of the staircase design.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
