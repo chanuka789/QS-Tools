@@ -5,21 +5,158 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>QS Tools</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
-<body class="bg-gray-100 flex flex-col min-h-screen">
-  <nav class="bg-white shadow p-4 flex justify-between">
-    <div class="text-xl font-bold"><a href="./">QS Tools</a></div>
-    <ul class="flex space-x-4">
-      <li><a href="./index.html" class="text-blue-500">Home</a></li>
-      <li><a href="./Staircase/index.html" class="text-blue-500">Staircase</a></li>
-    </ul>
+<body class="flex flex-col min-h-screen">
+  <!-- Navigation Bar -->
+  <nav class="bg-white shadow">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="./" class="text-2xl font-bold text-blue-600">QS Tools</a>
+      <ul class="flex space-x-6 text-gray-600">
+        <li><a href="#home" class="hover:text-blue-600">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-600">About</a></li>
+        <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+        <li><a href="#support" class="hover:text-blue-600">Support</a></li>
+      </ul>
+    </div>
   </nav>
-  <main class="flex-grow p-8">
-    <h1 class="text-3xl font-bold mb-4">Welcome to QS Tools</h1>
-    <p class="text-gray-700">Select a tool from the navigation to begin.</p>
+
+  <!-- Intro Section -->
+  <header id="home" class="bg-blue-50">
+    <div class="max-w-7xl mx-auto py-20 px-4 text-center">
+      <h1 class="text-4xl font-extrabold text-gray-900 mb-4">Powerful Quantity Surveying Tools</h1>
+      <p class="text-gray-600 mb-8">Simplify construction estimates with our suite of professional calculators and estimators.</p>
+      <a href="#tools" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-md font-medium">Explore Tools</a>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- Tools Section -->
+    <section id="tools" class="max-w-7xl mx-auto px-4 py-12">
+      <div class="flex justify-between items-center mb-8 flex-col sm:flex-row gap-4">
+        <h2 class="text-2xl font-bold text-gray-800">Tools</h2>
+        <input id="tool-search" type="text" placeholder="Search tools..." class="border border-gray-300 rounded-md px-3 py-2 w-full sm:w-64" />
+      </div>
+      <div id="tool-grid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <!-- Concrete Volume Calculator -->
+        <div class="tool-card bg-white shadow rounded-lg p-6 flex flex-col">
+          <span class="material-symbols-outlined text-blue-600 text-4xl mb-4">calculate</span>
+          <h3 class="text-xl font-semibold mb-2">Concrete Volume Calculator</h3>
+          <p class="text-gray-600 mb-4">Quickly calculate concrete volume for slabs, beams, columns, and foundations.</p>
+          <a href="./concrete-volume-calculator/index.html" class="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded-md text-center">Open Tool</a>
+        </div>
+        <!-- Formwork Area Estimator -->
+        <div class="tool-card bg-white shadow rounded-lg p-6 flex flex-col">
+          <span class="material-symbols-outlined text-blue-600 text-4xl mb-4">square_foot</span>
+          <h3 class="text-xl font-semibold mb-2">Formwork Area Estimator</h3>
+          <p class="text-gray-600 mb-4">Compute shuttering areas for walls, slabs, beams, and columns with accuracy.</p>
+          <a href="./formwork-area-estimator/index.html" class="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded-md text-center">Open Tool</a>
+        </div>
+        <!-- Reinforcement Quantifier -->
+        <div class="tool-card bg-white shadow rounded-lg p-6 flex flex-col">
+          <span class="material-symbols-outlined text-blue-600 text-4xl mb-4">straighten</span>
+          <h3 class="text-xl font-semibold mb-2">Reinforcement Quantifier</h3>
+          <p class="text-gray-600 mb-4">Estimate rebar weight and spacing based on structural design parameters.</p>
+          <a href="./reinforcement-quantifier/index.html" class="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded-md text-center">Open Tool</a>
+        </div>
+        <!-- Blockwork/Brickwork Calculator -->
+        <div class="tool-card bg-white shadow rounded-lg p-6 flex flex-col">
+          <span class="material-symbols-outlined text-blue-600 text-4xl mb-4">texture</span>
+          <h3 class="text-xl font-semibold mb-2">Blockwork/Brickwork Calculator</h3>
+          <p class="text-gray-600 mb-4">Measure wall areas and calculate required blocks/bricks, mortar quantities, and wastage.</p>
+          <a href="./blockwork-brickwork-calculator/index.html" class="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded-md text-center">Open Tool</a>
+        </div>
+        <!-- Plaster & Paint Estimator -->
+        <div class="tool-card bg-white shadow rounded-lg p-6 flex flex-col">
+          <span class="material-symbols-outlined text-blue-600 text-4xl mb-4">format_paint</span>
+          <h3 class="text-xl font-semibold mb-2">Plaster &amp; Paint Estimator</h3>
+          <p class="text-gray-600 mb-4">Calculate plaster area and paint coverage for walls and ceilings.</p>
+          <a href="./plaster-paint-estimator/index.html" class="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded-md text-center">Open Tool</a>
+        </div>
+        <!-- Steel Section Quantity Tool -->
+        <div class="tool-card bg-white shadow rounded-lg p-6 flex flex-col">
+          <span class="material-symbols-outlined text-blue-600 text-4xl mb-4">architecture</span>
+          <h3 class="text-xl font-semibold mb-2">Steel Section Quantity Tool</h3>
+          <p class="text-gray-600 mb-4">Determine weight and length for structural steel members (I-beams, channels, angles, etc.).</p>
+          <a href="./steel-section-quantity-tool/index.html" class="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded-md text-center">Open Tool</a>
+        </div>
+        <!-- Floor & Tiling Calculator -->
+        <div class="tool-card bg-white shadow rounded-lg p-6 flex flex-col">
+          <span class="material-symbols-outlined text-blue-600 text-4xl mb-4">grid_view</span>
+          <h3 class="text-xl font-semibold mb-2">Floor &amp; Tiling Calculator</h3>
+          <p class="text-gray-600 mb-4">Estimate material quantities for tiles, screed, and adhesives.</p>
+          <a href="./floor-tiling-calculator/index.html" class="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded-md text-center">Open Tool</a>
+        </div>
+        <!-- Rate Analysis Tool -->
+        <div class="tool-card bg-white shadow rounded-lg p-6 flex flex-col">
+          <span class="material-symbols-outlined text-blue-600 text-4xl mb-4">attach_money</span>
+          <h3 class="text-xl font-semibold mb-2">Rate Analysis Tool</h3>
+          <p class="text-gray-600 mb-4">Break down costs by material, labor, and equipment to generate quick BOQ rates.</p>
+          <a href="./rate-analysis-tool/index.html" class="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded-md text-center">Open Tool</a>
+        </div>
+        <!-- Earthwork Cut & Fill Estimator -->
+        <div class="tool-card bg-white shadow rounded-lg p-6 flex flex-col">
+          <span class="material-symbols-outlined text-blue-600 text-4xl mb-4">terrain</span>
+          <h3 class="text-xl font-semibold mb-2">Earthwork Cut &amp; Fill Estimator</h3>
+          <p class="text-gray-600 mb-4">Compute excavation and backfilling quantities from levels or volume inputs.</p>
+          <a href="./earthwork-cut-fill-estimator/index.html" class="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded-md text-center">Open Tool</a>
+        </div>
+        <!-- MEP Services Quantity Tool -->
+        <div class="tool-card bg-white shadow rounded-lg p-6 flex flex-col">
+          <span class="material-symbols-outlined text-blue-600 text-4xl mb-4">plumbing</span>
+          <h3 class="text-xl font-semibold mb-2">MEP Services Quantity Tool</h3>
+          <p class="text-gray-600 mb-4">Estimate piping lengths, ductwork areas, and cabling runs for mechanical/electrical services.</p>
+          <a href="./mep-services-quantity-tool/index.html" class="mt-auto inline-block bg-blue-600 text-white px-4 py-2 rounded-md text-center">Open Tool</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 py-12">
+        <h2 class="text-2xl font-bold mb-4">About</h2>
+        <p class="text-gray-600">QS Tools is a professional SaaS platform providing streamlined calculators and estimators for quantity surveyors and construction professionals.</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="max-w-7xl mx-auto px-4 py-12">
+      <h2 class="text-2xl font-bold mb-4">Contact</h2>
+      <p class="text-gray-600">Reach us at <a href="mailto:support@qstools.com" class="text-blue-600">support@qstools.com</a>.</p>
+    </section>
+
+    <!-- Support Section -->
+    <section id="support" class="bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 py-12 text-center">
+        <h2 class="text-2xl font-bold mb-4">Need Help?</h2>
+        <p class="text-gray-600 mb-4">Explore our documentation or contact our team for assistance.</p>
+        <a href="#contact" class="bg-blue-600 text-white px-6 py-3 rounded-md">Get Support</a>
+      </div>
+    </section>
   </main>
-  <footer class="bg-white shadow p-4 text-center">
-    <p class="text-sm text-gray-500">&copy; 2025 QS Tools</p>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col sm:flex-row justify-between items-center">
+      <p class="text-gray-500 text-sm">&copy; 2025 QS Tools. All rights reserved.</p>
+      <div class="flex space-x-4 mt-4 sm:mt-0">
+        <a href="#" class="text-gray-400 hover:text-blue-600">Twitter</a>
+        <a href="#" class="text-gray-400 hover:text-blue-600">LinkedIn</a>
+        <a href="#" class="text-gray-400 hover:text-blue-600">Facebook</a>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    const searchInput = document.getElementById('tool-search');
+    const cards = document.querySelectorAll('.tool-card');
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase();
+      cards.forEach(card => {
+        const match = card.textContent.toLowerCase().includes(query);
+        card.classList.toggle('hidden', !match);
+      });
+    });
+  </script>
 </body>
 </html>
